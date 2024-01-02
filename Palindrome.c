@@ -1,17 +1,22 @@
-#include<stdio.h>
-int main(){
-    int num,temp;
-    scanf("%d",&num);
-    temp=num;
-    int rev=0;
-    while(num){
-        rev=(rev*10)+num%10;
-        num=num/10;
-    }
-    if(rev==temp){
-        printf("Palindrome");
-    }
-    else{
-        printf("Not Palindrome");
-    }
-}
+#include <stdio.h>
+#include <stdbool.h>
+
+  int main () {
+      int num;
+      scanf("%d", &num);
+      
+      int reverse = 0;
+      int temp = num;
+      
+      while(temp > 0) {
+          reverse = reverse * 10 + (temp % 10);
+          temp /= 10;
+      }
+      
+      if(num == reverse) {
+          printf("True");
+      } else {
+          printf("False");
+      }
+      
+  }
