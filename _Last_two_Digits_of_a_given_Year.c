@@ -1,10 +1,19 @@
-#include<stdio.h>
+#include <stdio.h>
 
- int main () {
-     int x;
-     scanf("%d", &x);
-     
-     printf("%02d", x % 100);
-     
-     return 0;
- }
+int LastTwoDigits(int year) {
+    return year % 100;
+}
+
+void Display(int result) {
+    printf("%02d", result);
+}
+
+void Read () {
+    int n;
+    scanf("%d", &n);
+    Display(LastTwoDigits(n));
+}
+
+int main () {
+    Read();
+}
