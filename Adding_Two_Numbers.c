@@ -1,13 +1,20 @@
 #include <stdio.h>
 
-//Function with no return type that prints addition of two numbers
-void add(int a, int b) {
-    int c = a + b;
+void Display (int c) {
     printf("%d", c);
 }
 
-int main () {
+int add(int a, int b) {
+    return a + b; 
+}
+
+void Read() {
     int a, b;
     scanf("%d %d", &a, &b);
-    add(a, b);
+    int c = add(a, b);
+    Display(c);
+}
+
+int main () {
+    Read();
 }
