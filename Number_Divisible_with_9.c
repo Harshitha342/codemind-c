@@ -1,11 +1,10 @@
-#include<stdio.h>
-int main(){
-    int a;
-    scanf("%d",&a);
-    if (a%9==0){
-        printf("True");
-    }
-    else{
-        printf("False");
-    }
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int num;
+    scanf("%d", &num);
+    char str[5];
+    strcpy(str, (num % 9)? "False" : "True");
+    printf("%s", str);
 }
