@@ -1,11 +1,17 @@
-#include<stdio.h>
-int main(){
-    int a;
-    scanf("%d",&a);
-    if (a%2==0){
+#include <stdio.h>
+
+int iseven(int num) {
+    return !(num % 2);
+}
+
+int main() {
+    int num;
+    scanf("%d", &num);
+    
+    if (iseven(num)) {
         printf("Even");
-    }
-    else {
+    } else {
         printf("Odd");
     }
+    
 }
