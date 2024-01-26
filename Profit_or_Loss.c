@@ -1,14 +1,17 @@
-#include<stdio.h>
-int main(){
-    int a,b;
-    scanf("%d %d",&a,&b);
-    if(a<b){
+#include <stdio.h>
+
+void DisplayGain(int cst_price, int selin_price) {
+    if (cst_price < selin_price) {
         printf("Profit");
-    }
-    else if(a==b){
+    } else if (cst_price > selin_price) {
+        printf("Loss");
+    } else {
         printf("No Profit and No Loss");
     }
-    else {
-        printf("Loss");
-    }
+}
+
+int main() {
+    int cst, sellin;
+    scanf("%d %d", &cst, &sellin);
+    DisplayGain(cst, sellin);
 }
