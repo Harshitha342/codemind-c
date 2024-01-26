@@ -1,11 +1,15 @@
-#include<stdio.h>
-int main(){
-    int a;
-    scanf("%d",&a);
-    if (a>20){
+#include <stdio.h>
+
+void DisplayTemp(int temp) {
+    if(temp > 20) {
         printf("HOT");
-    }
-    else {
+    } else {
         printf("COLD");
     }
+}
+
+int main() {
+    int temp;
+    scanf("%d", &temp);
+    DisplayTemp(temp);
 }
