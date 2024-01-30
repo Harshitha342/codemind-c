@@ -1,11 +1,22 @@
-#include<stdio.h>
-int main(){
-    int a,b;
-    scanf("%d %d",&a,&b);
-    if((5*a)>=b){
-        printf("YES");
+#include <stdio.h>
+
+void Destiny (int ltr, int dist) {
+    int canTravel = 5 * ltr;
+    
+    if (canTravel >= dist) {
+        printf("YES
+");
+    } else {
+        printf("NO
+");
     }
-    else {
-        printf("NO");
-    }
+    
+}
+
+int main() {
+    int num1, num2;
+    scanf("%d %d", &num1, &num2);
+    
+    Destiny(num1, num2);
+    
 }
