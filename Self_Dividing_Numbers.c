@@ -1,23 +1,29 @@
-#include<stdio.h>
-int main(){
-    int a,b;
-    scanf("%d %d",&a,&b);
-    for(int i=a ; i<=b; i++){
-        int dig=0,cnt=0;
-        int temp=i;
-        while(temp>0){
-        int rev = temp % 10;
-        temp/=10;
-        dig++;
-        if(rev == 0){
-            break;
+#include <stdio.h>
+
+int isSelfDiv (int num) {
+    int temp = num;
+    while(temp > 0) {
+        
+        int digit = temp % 10;
+        if(digit == 0) {
+            return 0;
+        } else if(num % digit != 0) {
+            return 0;
         }
-        else if(i % rev==0){
-            cnt++;
-        }
-        }
-        if(cnt == dig){
-        printf("%d ",i);
+        
+        temp /= 10;
     }
+    return 1;
+}
+
+int main() {
+    int num1, num2;
+    scanf("%d %d", &num1, &num2);
+    
+    for(int i = num1; i <= num2; i++) {
+        if(isSelfDiv(i)) {
+            printf("%d ", i);
+        }
     }
+    
 }
