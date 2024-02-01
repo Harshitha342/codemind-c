@@ -1,12 +1,15 @@
-#include<stdio.h>
-int main(){
+#include <stdio.h>
+
+int main() {
     int num;
-    scanf("%d",&num);
-    int last_digit=0;
-    while(num){
-        int i=num % 10;
-        num=num/10;
-        last_digit=last_digit+i;
+    scanf("%d", &num);
+    
+    int sum = 0;
+    while (num > 0) {
+        int digit = num % 10;
+        sum += digit;
+        num /= 10;
     }
-    printf("%d",last_digit);
+    printf("%d", sum);
+    
 }
