@@ -1,11 +1,13 @@
-#include<stdio.h>
-int main(){
-    int n;
-    scanf("%d",&n);
-    int digits=0;
-    while(n>0){
-        digits++;
-        n=n/10;
+#include <stdio.h>
+
+int main() {
+    int num;
+    scanf("%d", &num);
+    
+    int count = 0;
+    while (num > 0){
+        count++;
+        num /= 10;
     }
-    printf("%d",digits);
+    printf("%d", count);
 }
