@@ -1,13 +1,23 @@
-#include<stdio.h>
-int main(){
-    int num,first,last;
-    int sum=0;
-    scanf("%d",&num);
-    last=num%10;
-    while(num>=10){
-        num=num/10;
+#include <stdio.h>
+
+int getLast (int num) {
+    return num % 10;
+}
+
+int getFirst (int num) {
+    while (num > 10) {
+        num /= 10;
     }
-    first=num;
-    sum=first+last;
-    printf("%d",sum);
+    return num;
+}
+
+int main() {
+    int num;
+    scanf("%d", &num);
+    
+    int First = getFirst(num);
+    int Last = getLast(num);
+    
+    printf("%d", First + Last);
+    
 }
