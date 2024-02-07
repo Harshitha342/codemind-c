@@ -1,18 +1,36 @@
-#include<stdio.h>
-int main(){
+#include <stdio.h>
+
+int SumofDigits(int num) {
+    int sum = 0;
+    while (num != 0) {
+        sum += num % 10;
+        num /= 10;
+    }
+    return sum;
+}
+
+int ProductofDigits(int num) {
+    int product = 1;
+    while (num > 0) {
+        product *= num % 10;
+        num /= 10;
+    }
+    return product;
+}
+
+int main() {
     int num;
-    scanf("%d",&num);
-    int rev,res=0,pro=1;
-    while(num){
-        rev=num%10;
-        res+=rev;
-        pro*=rev;
-        num=num/10;
+    scanf("%d", &num);
+    
+    int sum = SumofDigits(num);
+    int product = ProductofDigits(num);
+    
+    if (sum == product) {
+        printf("Spy Number
+");
+    } else {
+        printf("Not Spy Number
+");
     }
-    if(res == pro){
-        printf("Spy Number");
-    }
-    else{
-        printf("Not Spy Number");
-    }
+    
 }
