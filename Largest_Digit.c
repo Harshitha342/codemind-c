@@ -1,14 +1,18 @@
-#include<stdio.h>
-int main(){
-    int num;
-    scanf("%d",&num);
-    int last=0,b=0;
-    while(num){
-        last = num%10;
-        if(last > b){
-           b =last;
+#include <stdio.h>
+
+void printLargestDigit(int number) {
+    int digit = 0;
+    while(number != 0) {
+        int num = number % 10;
+        number /= 10;
+        if (digit == 0 || digit < num) {
+            digit = num;
         }
-        num = num/10;
-    }
-    printf("%d",b);
+    } printf("%d", digit);
+}
+
+int main() {
+    int Number;
+    scanf("%d", &Number);
+    printLargestDigit(Number);
 }
