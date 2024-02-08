@@ -1,15 +1,19 @@
-#include<stdio.h>
-int main(){
-    int num;
-    scanf("%d",&num);
-    int a,b,c;
-    a=0;
-    b=1;
-    c=0;
-    for(int i = 1 ; i<=num ; i++){
-        printf("%d ",c);
-        a=b;
-        b=c;
-        c=a+b;
+#include <stdio.h>
+
+void printFibonacii(int range);
+
+int main() {
+    int range;
+    scanf("%d", &range);
+    printFibonacii(range);
+}
+
+void printFibonacii(int range) {
+    int a = 0, b = 1, c = 0;
+    for(int i = 0; i < range; i++) {
+        printf("%d ", c);
+        a = b;
+        b = c;
+        c = c + a;
     }
 }
