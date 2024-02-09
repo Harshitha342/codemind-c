@@ -1,18 +1,22 @@
 #include <stdio.h>
 
-void printLargestDigit(int number) {
+int getlargestdigit(int num) {
     int digit = 0;
-    while(number != 0) {
-        int num = number % 10;
-        number /= 10;
-        if (digit == 0 || digit < num) {
-            digit = num;
-        }
-    } printf("%d", digit);
+    
+    while (num != 0) {
+        int n = num % 10;
+        digit = (digit > n)? digit : n;
+        num /= 10;
+    }
+    
+    return digit;
 }
 
 int main() {
-    int Number;
-    scanf("%d", &Number);
-    printLargestDigit(Number);
+    int num;
+    scanf("%d", &num);
+    
+    int LargestDigit = getlargestdigit(num);
+    printf("%d", LargestDigit);
+    
 }
