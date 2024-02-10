@@ -1,11 +1,14 @@
-#include<stdio.h>
-int main(){
-    int a;
-    scanf("%d",&a);
-    int rev=0;
-    while(a){
-        rev=(rev*10)+a%10;
-        a=a/10;
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[1001];
+    scanf("%s", str);
+    
+    int len = strlen(str);
+    for(int i = len - 1; i >= 0; i--) {
+        printf("%c", str[i]);
     }
-    printf("%d",rev);
+    
+    return 0;
 }
