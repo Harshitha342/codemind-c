@@ -1,12 +1,12 @@
-#include<stdio.h>
-int main(){
-    int a,b;
-    scanf("%d %d",&a,&b);
-    int cnt=0;
-    for(int i=a ; i<=b ; i++){
-        if(i%3==0){
-            cnt++;
-        }
-    }
-    printf("%d",cnt);
+#include <stdio.h>
+
+int main() {
+    int strt, end;
+    scanf("%d %d", &strt, &end);
+    
+    int count = (strt % 3 == 0)? 1 : 0;
+    count += (end / 3) - ((strt - 1) / 3);
+    
+    printf("%d", count);
+    return 0;
 }
